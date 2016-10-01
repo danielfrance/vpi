@@ -5,7 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Session;
 use Symfony\Component\HttpFoundation\Response;
 
 class ContactController extends Controller
@@ -18,6 +20,9 @@ class ContactController extends Controller
     public function index()
     {
         dd('hello');
+
+    
+
     }
 
     /**
@@ -38,23 +43,31 @@ class ContactController extends Controller
      */
     public function store(Request $request)
     {
-        $request->flash();
+        
+            
+            $request->flash();
 
-        $this->validate($request, [
-            'name'      =>  'required',
-            'email'     =>  'required',
-            'message'   =>  'required'
-        ]);
+            $this->validate($request, [
+                'name'      =>  'required',
+                'email'     =>  'required',
+                'message'   =>  'required'
+            ]);
 
+            Mail::send('emails.contact_form',['request' => $request], function($m) use ($request){
+                $m->from('hello@vpilv.com', 'Contact Form Submission');
+                $m->to('dfrance1@gmail.com')->subject('test');
+            });
 
-        Mail::send('emails.contact_form',['request' => $request], function($m) use ($request){
-            $m->from('hello@vpilv.com', 'Contact Form Submission');
-            $m->to('dfrance1@gmail.com')->subject('test');
-        });
+            if (count(Mail::failures()) == 0) {
+                 Session::flash('messages', 'Thanks for contacting us.  We will be in touch shortly');
+            }
+            else{
+                Session::flash('messages', 'Looks like there were some errors with your message.  Please try to reach us by phone');
+            }
 
-
-        return Response::json()
-
+            return redirect('/#contact');
+           
+    
 
     }
 

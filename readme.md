@@ -1,3 +1,6 @@
+when installing on a subdomain, make sure to set ownership of public/ storage/ tests/ to the user
+`chown -R user:user public/ storage/ test/`
+
 # Laravel PHP Framework
 
 [![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
