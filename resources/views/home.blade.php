@@ -28,7 +28,7 @@
 <body>
 <div id="root">
     <header id="top">
-        <h1><a href="#" accesskey="h"><img src="http://placehold.it/257x81" alt="Placeholder" width="257" height="81"></a></h1>
+        {{--<h1><a href="#" accesskey="h"><img src="http://placehold.it/257x81" alt="Placeholder" width="257" height="81"></a></h1>--}}
         <nav id="skip">
             <ul>
                 <li><a href="#nav" accesskey="n">Skip to navigation (n)</a></li>
@@ -45,9 +45,16 @@
         </nav>
     </header>
     <article id="welcome">
-        {{--<figure class="mobile-a"><img src="http://placehold.it/297x526" alt="Placeholder" width="297" height="526"></figure>--}}
-        <h2><span>Valley Press</span> of Las Vegas</h2>
-        <p>for all your printing needs</p>
+        <div class="ui grid container">
+            <div class="five wide column">
+                <img src="assets/images/logo.png" alt="Placeholder" >
+            </div>
+            <div class="eight wide column">
+                <h2><span>Valley Press</span> of Las Vegas</h2>
+                <p>for all your printing needs</p>
+            </div>
+        </div>
+
 
     </article>
     <section id="content" class="a">
@@ -57,7 +64,7 @@
                 <p>There’s simply no substitute for superior print and graphic design quality. Price is important, but long after the invoice has been paid, it’s our quality you’ll remember. While other commercial printers of Las Vegas come and go, we’ve been steadily growing for more than 20 years in the Las Vegas Valley</p>
             </header>
             <ul class="list-a">
-                <li><a href="./"><img src="assets/images/services/printing.jpeg" alt=""> <span class="title">Printing</span> From letterhead and envelopes to business cards and brochures, no job is too large or too small for Valley Press. Let us help you create the professional identity you need.</a></li>
+                <li><a href="./"><img src="assets/images/services/envelopes.jpg" alt=""> <span class="title">Printing</span> From letterhead and envelopes to business cards and brochures, no job is too large or too small for Valley Press. Let us help you create the professional identity you need.</a></li>
                 <li><a href="./"><img src="assets/images/services/signs.jpeg" alt=""> <span class="title">Signs & Banners </span> Looking for top quality Signs & Banners? You've found it! At Valley Press, we specialize in creating stunning vehicle wraps, window graphics, etc. We are truly your one stop shop!</a></li>
                 <li><a href="./"><img src="assets/images/services/promo.jpeg" alt=""> <span class="title">Promotional Items</span> Improve the look of your team with personalized promotional items like shirts, mugs, keychains, pens, or special engravings. We design it all.</a></li>
             </ul>
@@ -87,38 +94,38 @@ On a more personal level, we will begin in 1962. It was then that he met Elaine 
 
             </div>
             <ul class="gallery-b">
-                <li><a href="#"><img class='team' src="assets/images/staff/greta.jpg" alt="Greta Chanin" > </a>
+                <li><img class='team' src="assets/images/staff/greta.jpg" alt="Greta Chanin" >
                     <div>
                         <h4><span>Greta Chanin</span></h4>
                        
                        
                     </div>
                 </li>
-                <li><a href="#"><img class='team' src="assets/images/staff/sheila.jpg" alt="Sheila Hacco" > </a>
+                <li><img class='team' src="assets/images/staff/sheila.jpg" alt="Sheila Hacco" >
                     <div>
                         <h4><span>Shiela Hacco</span></h4>
                        
                     </div>
                 </li>
-                <li><a href="#"><img class='team' src="assets/images/staff/wayne.jpg" alt="Wayne Roux" > </a>
+                <li><img class='team' src="assets/images/staff/wayne.jpg" alt="Wayne Roux" >
                     <div>
                         <h4><span>Wayne Roux</span></h4>
                         
                     </div>
                 </li>
-                <li><a href="#"><img class='team' src="assets/images/staff/lori.jpg" alt="Lori Nguyen" > </a>
+                <li><img class='team' src="assets/images/staff/lori.jpg" alt="Lori Nguyen" >
                     <div>
                         <h4><span>Lori Nguyen</span></h4>
                         
                     </div>
                 </li>
-                <li><a href="#"><img class='team' src="assets/images/staff/leon.jpg" alt="Leon Kellar" > </a>
+                <li><img class='team' src="assets/images/staff/steve.jpg" alt="Steve Smith" >
                     <div>
-                        <h4><span>Leon Kellar</span></h4>
-                        
+                        <h4><span>Steve Smith</span></h4>
+
                     </div>
                 </li>
-                <li><a href="#"><img class='team' src="assets/images/staff/randy.jpg" alt="Randy Wong" > </a>
+                <li><img class='team' src="assets/images/staff/randy.jpg" alt="Randy Wong" >
                     <div>
                         <h4><span>Randy Wong</span></h4>
                        

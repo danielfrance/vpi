@@ -372,13 +372,13 @@ head.ready(function() {
 				};
 			},
 			miscellaneous : function(){
-				$('#top, #content.a > .vid figure a, .gallery-b > li').append('<div class="fit-a"><div></div></div>');
+				// $('#top, #content.a > .vid figure a, .gallery-b > li').append('<div class="fit-a"><div></div></div>');
 				$('#nav li > ul').parent().addClass('sub');
 				$('#top').each(function(){ $(this).clone().attr('id','clone').insertAfter('#featured, #welcome').find('#nav').removeAttr('id').parent().find('#skip').remove(); });
 				$('#top > .fit-a, #clone > .fit-a, .gallery-a > li > a').on('click',function(){ $(this).parent().toggleClass('active'); });
 				$('.list-a li').wrapInner('<span class="inner"></span>');
 				$('.list-b').each(function(){ tn=1; $(this).children('li:not([class*=mobile])').each(function(){ $(this).addClass('c'+tn).prepend('<span class="no">'+tn+'</span> '); tn++; });});
-				$('.gallery-a, .gallery-b').each(function(){ $(this).addClass('mobile-hide').clone().removeClass('mobile-hide').addClass('mobile-only').insertAfter($(this)); });
+				// $('.gallery-a, .gallery-b').each(function(){ $(this).addClass('mobile-hide').clone().removeClass('mobile-hide').addClass('mobile-only').insertAfter($(this)); });
 				$('.gallery-c ul, .news-d').each(function(){ 
 					$(this).addClass('regular-hide').clone().removeClass('regular-hide').addClass('regular-only').insertAfter($(this));
 					$(this).addClass('regular-hide').clone().removeClass('regular-hide').addClass('tablet-only').insertAfter($(this));
@@ -399,15 +399,15 @@ head.ready(function() {
 					if($(this).hasClass('tablet-only')){ $(this).children('.inner').each(function(){ $(this).bxSlider({ pager: true, controls: false, useCSS: false, adaptiveHeight: true, minSlides: 1, maxSlides: 2, moveSlides: 2, slideWidth: 342, slideMargin: 34 }); }); }
 					if($(this).hasClass('mobile-only')){ $(this).children('.inner').each(function(){ $(this).bxSlider({ pager: true, controls: false, useCSS: false, adaptiveHeight: true, slideMargin: 10 }); }); }
 				});
-				$('.gallery-a.mobile-only, .gallery-b.mobile-only').wrapInner('<div class="inner"></div>').children('.inner').each(function(){ $(this).bxSlider({ pager: true, controls: false, useCSS: false, adaptiveHeight: true, slideMargin: 10 }); });
+				// $('.gallery-a.mobile-only, .gallery-b.mobile-only').wrapInner('<div class="inner"></div>').children('.inner').each(function(){ $(this).bxSlider({ pager: true, controls: false, useCSS: false, adaptiveHeight: true, slideMargin: 10 }); });
 				$('a[href*=youtube], a[href*=vimeo], a[href*=metacafe], a[href*=dailymotion]').fancybox({ helpers : { media : {} } });
 				$('.counter > span').addClass('v');
 				$('#content.a > .vid figure a > .fit-a').each(function(){ $(this).css({'background-image':'url("'+$(this).parents('figure').find('img').attr('src')+'")'}); });
 				$('html.csstransitions .slider-b').attr('data-carousel-3d',true);
 				$('html.lt-ie9 .slider-b').removeClass('slider-b').addClass('slider-bb').wrapInner('<div class="inner"></div>');
-				$('.gallery-b li > a > img').parent('a').each(function(){ $(this).clone().addClass('link').appendTo($(this).parents('li').find('div:not(.fit-a)')); $(this).clone().addClass('link').appendTo($(this).parents('li')); });				
+				// $('.gallery-b li > a > img').parent('a').each(function(){ $(this).clone().addClass('link').appendTo($(this).parents('li').find('div:not(.fit-a)')); $(this).clone().addClass('link').appendTo($(this).parents('li')); });
 				$('.gallery-c ul li > a').each(function(){ $(this).clone().wrap('<div class="link"></div>').parent().insertAfter($(this)); $(this).clone().addClass('main').insertAfter($(this)); });
-				$('.gallery-b li > div:not(.fit-a), .gallery-c ul li > div a, #top h1 a img, #clone h1 a img').each(function(){ $(this).css('margin-top',-$(this).outerHeight()*.5); });
+				// $('.gallery-b li > div:not(.fit-a), .gallery-c ul li > div a, #top h1 a img, #clone h1 a img').each(function(){ $(this).css('margin-top',-$(this).outerHeight()*.5); });
 				$('.slider-b').addClass('mobile-hide').after('<div class="slider-ba mobile-only"><div class="inner"></div></div>').children('li').each(function(){ $(this).clone().removeAttr('style').appendTo($(this).parents('.slider-b').next('.slider-ba').children('.inner')); });
 				$('.slider-ba > .inner, .slider-bb > .inner').each(function(){ $(this).bxSlider({ pager: false, controls: true, useCSS: false, adaptiveHeight: true }); });
 				$('img.zoomin, .zoomin img').imageLens({ lensSize: 333, borderSize: 5, borderColor: "#fff" });

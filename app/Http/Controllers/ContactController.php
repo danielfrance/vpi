@@ -19,9 +19,7 @@ class ContactController extends Controller
      */
     public function index()
     {
-        dd('hello');
 
-    
 
     }
 
@@ -43,7 +41,7 @@ class ContactController extends Controller
      */
     public function store(Request $request)
     {
-        
+//            dd($request->name);
             
             $request->flash();
 
@@ -55,7 +53,7 @@ class ContactController extends Controller
 
             Mail::send('emails.contact_form',['request' => $request], function($m) use ($request){
                 $m->from('hello@vpilv.com', 'Contact Form Submission');
-                $m->to('dfrance1@gmail.com')->subject('test');
+                $m->to('gretavpi@aol.com')->subject($request->name . ' contact from VPILV.com');
             });
 
             if (count(Mail::failures()) == 0) {
