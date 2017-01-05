@@ -94,6 +94,9 @@
                 </div>
 
             </div>
+            <br><br>
+            <br><br>
+
             <ul class="gallery-b">
                 <li><img class='team' src="assets/images/staff/greta.jpg" alt="Greta Chanin" >
                     <div>
